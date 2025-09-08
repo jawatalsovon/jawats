@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jawat Al Sovon</title>
+    <title>Jawat - Portfolio</title>
     <!-- Favicon for the browser tab -->
     <link rel="icon" type="image/png" href="favicon.ico.ico">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,12 +11,21 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Fallback for browsers */
+            background-image: radial-gradient(at center, rgba(40, 40, 40, 0.9), rgba(180, 180, 180, 0.4));
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         .modal {
             transition: opacity 0.3s ease-in-out;
         }
+        /* Applying the same radial gradient to the modal content boxes */
         .modal-content {
+            background-color: rgba(40, 40, 40, 0.9); /* Fallback */
+            background-image: radial-gradient(at center, rgba(40, 40, 40, 0.9), rgba(180, 180, 180, 0.4));
             animation: slideIn 0.3s ease-out;
+            border: 2px solid #374151; /* A subtle border to define the box */
         }
         @keyframes slideIn {
             from {
@@ -30,82 +39,90 @@
         }
     </style>
 </head>
-<body class="bg-slate-900 text-gray-300 min-h-screen flex flex-col items-center justify-center p-4">
+<body class="text-gray-300 min-h-screen flex flex-col items-center justify-center p-4">
 
     <!-- Profile Picture & Name -->
     <div class="text-center mb-12">
-        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-slate-700 shadow-lg">
+        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-gray-700 shadow-lg">
             <img src="profile.jpg" alt="Jawat's photo" class="w-full h-full object-cover">
         </div>
         <h1 class="text-4xl sm:text-5xl font-bold text-white mb-2">Jawat</h1>
-        <p class="text-lg text-gray-400">High School Grad | Class of 2025</p>
+        <p class="text-lg text-gray-400">High School Graduate | Class of 2025</p>
     </div>
 
-    <!-- Main Grid of Sections -->
-    <div class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Main Container for Layout -->
+    <div class="w-full max-w-5xl">
         
-        <!-- About Me Section -->
-        <div data-modal-target="about-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">About Me</h2>
-                <p class="text-center text-gray-400">Learn more about my background and interests.</p>
-            </div>
-        </div>
-
-        <!-- Education Section -->
-        <div data-modal-target="education-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">Education</h2>
-                <p class="text-center text-gray-400">A look at my academic journey.</p>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div data-modal-target="skills-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">Skills</h2>
-                <p class="text-center text-gray-400">Technologies and skills I have mastered.</p>
-            </div>
-        </div>
-
-        <!-- Projects Section -->
-        <div data-modal-target="projects-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">Projects</h2>
-                <p class="text-center text-gray-400">Showcasing my work and creations.</p>
-            </div>
-        </div>
-
-        <!-- Honors Section -->
-        <div data-modal-target="honors-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">Honors</h2>
-                <p class="text-center text-gray-400">Awards and achievements I've received.</p>
-            </div>
-        </div>
-
-        <!-- Leadership Section -->
-        <div data-modal-target="leadership-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">Leadership</h2>
-                <p class="text-center text-gray-400">My experience in leading and collaborating.</p>
-            </div>
-        </div>
-
-         <!-- Extracurricular Activities Section -->
-        <div data-modal-target="activities-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">Extracurricular Activities</h2>
-                <p class="text-center text-gray-400">My passions outside of academics.</p>
-            </div>
+        <!-- About Me Section (No Box) -->
+        <div data-modal-target="about-modal" class="group cursor-pointer text-center mb-6">
+            <h2 class="text-3xl font-bold text-white mb-2">About Me</h2>
+            <p class="text-center text-gray-400">Learn more about my background and interests.</p>
         </div>
         
-        <!-- Contact Section -->
-        <div data-modal-target="contact-modal" class="group cursor-pointer p-6 bg-slate-800 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-slate-700">
-            <div class="flex flex-col items-center">
-                <h2 class="text-2xl font-semibold mb-2 text-white">Contact</h2>
-                <p class="text-center text-gray-400">Get in touch with me!</p>
+        <!-- Resume Download Button -->
+        <div class="text-center mb-10">
+            <a href="#" class="inline-block bg-gray-700/60 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:scale-105 hover:bg-gray-600/60 transition-transform duration-300 transform-gpu">
+                Download Resume
+            </a>
+            <!-- TODO: Replace the '#' with the path to your resume file, e.g., 'resume.pdf' -->
+        </div>
+
+        <!-- Middle Sections in a 3x2 Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            
+            <!-- Education Section -->
+            <div data-modal-target="education-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold mb-2 text-white">Education</h2>
+                    <p class="text-center text-gray-400">A look at my academic journey.</p>
+                </div>
             </div>
+
+             <!-- Extracurricular Activities Section -->
+            <div data-modal-target="activities-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold mb-2 text-white">Extracurricular Activities</h2>
+                    <p class="text-center text-gray-400">My passions outside of academics.</p>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div data-modal-target="projects-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold mb-2 text-white">Projects</h2>
+                    <p class="text-center text-gray-400">Showcasing my work and creations.</p>
+                </div>
+            </div>
+
+            <!-- Leadership Section -->
+            <div data-modal-target="leadership-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold mb-2 text-white">Leadership</h2>
+                    <p class="text-center text-gray-400">My experience in leading and collaborating.</p>
+                </div>
+            </div>
+            
+            <!-- Honors Section -->
+            <div data-modal-target="honors-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold mb-2 text-white">Honors</h2>
+                    <p class="text-center text-gray-400">Awards and achievements I've received.</p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div data-modal-target="skills-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold mb-2 text-white">Skills</h2>
+                    <p class="text-center text-gray-400">My technical and professional skills.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Section (No Box) -->
+        <div data-modal-target="contact-modal" class="group cursor-pointer text-center">
+            <h2 class="text-3xl font-bold text-white mb-2">Contact</h2>
+            <p class="text-center text-gray-400">Get in touch with me!</p>
         </div>
     </div>
 
@@ -118,7 +135,7 @@
 
     <!-- About Me Modal -->
     <div id="about-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
             <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
             <div class="flex justify-center mb-6">
@@ -132,7 +149,7 @@
 
     <!-- Education Modal -->
     <div id="education-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
             <h2 class="text-3xl font-bold text-white mb-4">Education</h2>
             <div class="flex justify-center mb-6">
@@ -144,74 +161,125 @@
             </ul>
         </div>
     </div>
-
-    <!-- Skills Modal -->
-    <div id="skills-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
-            <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
-            <h2 class="text-3xl font-bold text-white mb-4">Skills</h2>
-            <div class="flex justify-center mb-6">
-                <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Skills+Image" alt="Image representing skills" class="rounded-lg shadow-md">
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300">
-                <div>
-                    <h3 class="font-semibold text-white">Programming Languages</h3>
-                    <ul class="list-disc list-inside ml-4">
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>C++</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-white">Frameworks & Libraries</h3>
-                    <ul class="list-disc list-inside ml-4">
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Tailwind CSS</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
      <!-- Projects Modal -->
     <div id="projects-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative flex flex-col items-center">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
-            <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
-            <div class="flex justify-center mb-6">
-                <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Projects+Image" alt="Image representing projects" class="rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-white mb-6">Projects</h2>
+            <div class="w-full flex-grow flex flex-col items-center space-y-8 overflow-y-auto h-full">
+                <!-- Project 1 -->
+                <div class="project-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Project+1" alt="Image for project 1" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Project Title 1</h3>
+                    <p class="text-gray-300">Description of your first project. Talk about the technologies used, your role, and the key features or outcomes.</p>
+                </div>
+                <!-- Project 2 (with multiple images) -->
+                <div class="project-item w-full flex flex-col items-center text-center">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+                        <img src="https://placehold.co/200x200/1e293b/a0a7ad?text=Image+A" alt="Image A for project 2" class="rounded-lg shadow-md">
+                        <img src="https://placehold.co/200x200/1e293b/a0a7ad?text=Image+B" alt="Image B for project 2" class="rounded-lg shadow-md">
+                        <img src="https://placehold.co/200x200/1e293b/a0a7ad?text=Image+C" alt="Image C for project 2" class="rounded-lg shadow-md">
+                    </div>
+                    <h3 class="font-semibold text-xl text-white mb-2">Project Title 2</h3>
+                    <p class="text-gray-300">Description of your second project. This could be a complex application, a physical product, or a creative work. Use the multiple image slots to showcase different views or features of this project.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Project+3" alt="Image for project 3" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Project Title 3</h3>
+                    <p class="text-gray-300">Description of your third project. Highlight what makes this project unique or why it's a good example of your skills.</p>
+                </div>
             </div>
-            <ul class="list-disc list-inside text-gray-300 space-y-4">
-                <li><span class="font-semibold text-white">Portfolio Website:</span> Developed a personal portfolio to showcase my skills and projects.</li>
-                <li><span class="font-semibold text-white">E-commerce Backend:</span> Built a RESTful API for an e-commerce platform using Node.js.</li>
-                <li><span class="font-semibold text-white">Mobile Game:</span> Created a simple 2D game for mobile devices using a game engine.</li>
-            </ul>
         </div>
     </div>
     
      <!-- Honors Modal -->
     <div id="honors-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative flex flex-col items-center">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
-            <h2 class="text-3xl font-bold text-white mb-4">Honors</h2>
-            <div class="flex justify-center mb-6">
-                <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Honors+Image" alt="Image representing honors" class="rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-white mb-6">Honors</h2>
+            
+            <div class="w-full flex-grow flex flex-col items-center space-y-8 overflow-y-auto h-full">
+                <!-- Honor Item 1 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+1" alt="Image for certificate 1" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Academic Excellence Award</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 2 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+2" alt="Image for certificate 2" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">First Place - University Hackathon</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 3 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+3" alt="Image for certificate 3" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 3</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 4 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+4" alt="Image for certificate 4" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 4</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 5 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+5" alt="Image for certificate 5" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 5</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 6 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+6" alt="Image for certificate 6" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 6</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 7 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+7" alt="Image for certificate 7" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 7</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 8 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+8" alt="Image for certificate 8" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 8</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 9 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+9" alt="Image for certificate 9" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 9</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 10 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+10" alt="Image for certificate 10" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 10</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 11 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+11" alt="Image for certificate 11" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 11</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
+                <!-- Honor Item 12 -->
+                <div class="honors-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+12" alt="Image for certificate 12" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Honor 12</h3>
+                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                </div>
             </div>
-            <ul class="list-disc list-inside text-gray-300 space-y-2">
-                <li>Dean's List - Fall 2023</li>
-                <li>First Place - University Hackathon 2022</li>
-                <li>Academic Excellence Award - 2021</li>
-                <li>National Honor Society Member</li>
-                <li>First Place - Regional Science Fair</li>
-                <li>Student of the Year Award - 2019</li>
-            </ul>
         </div>
     </div>
-
-     <!-- Leadership Modal -->
+    
+    <!-- Leadership Modal -->
     <div id="leadership-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
             <h2 class="text-3xl font-bold text-white mb-4">Leadership</h2>
             <div class="flex justify-center mb-6">
@@ -226,107 +294,81 @@
     
     <!-- Extracurricular Activities Modal -->
     <div id="activities-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative flex flex-col items-center">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative flex flex-col items-center">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
             <h2 class="text-3xl font-bold text-white mb-6">Extracurricular Activities</h2>
-            
-            <div class="w-full flex-grow flex flex-col justify-center items-center">
-                <!-- Activities Content (for sliding) -->
-                <div id="activities-slider" class="w-full relative">
-                    <!-- Activities will be injected here by JavaScript -->
-                    <!-- Activity 1 -->
-                    <div class="activity-slide w-full p-4 hidden">
-                        <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+1" alt="Image for Activity 1" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Robotics Club</h3>
-                        <p class="text-gray-300">Description of your role and achievements in the Robotics Club.</p>
-                    </div>
-                    <!-- Activity 2 -->
-                    <div class="activity-slide w-full p-4 hidden">
-                        <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+2" alt="Image for Activity 2" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Volunteer at Animal Shelter</h3>
-                        <p class="text-gray-300">Description of your volunteer work and responsibilities.</p>
-                    </div>
-                    <!-- Activity 3 - 12 (placeholder for content) -->
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+3" alt="Image for Activity 3" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 3</h3>
-                        <p class="text-gray-300">Placeholder for your third activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+4" alt="Image for Activity 4" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 4</h3>
-                        <p class="text-gray-300">Placeholder for your fourth activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+5" alt="Image for Activity 5" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 5</h3>
-                        <p class="text-gray-300">Placeholder for your fifth activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+6" alt="Image for Activity 6" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 6</h3>
-                        <p class="text-gray-300">Placeholder for your sixth activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+7" alt="Image for Activity 7" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 7</h3>
-                        <p class="text-gray-300">Placeholder for your seventh activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+8" alt="Image for Activity 8" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 8</h3>
-                        <p class="text-gray-300">Placeholder for your eighth activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+9" alt="Image for Activity 9" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 9</h3>
-                        <p class="text-gray-300">Placeholder for your ninth activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+10" alt="Image for Activity 10" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 10</h3>
-                        <p class="text-gray-300">Placeholder for your tenth activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+11" alt="Image for Activity 11" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 11</h3>
-                        <p class="text-gray-300">Placeholder for your eleventh activity.</p>
-                    </div>
-                    <div class="activity-slide w-full p-4 hidden">
-                         <div class="flex justify-center mb-4">
-                            <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+12" alt="Image for Activity 12" class="rounded-lg shadow-md">
-                        </div>
-                        <h3 class="font-semibold text-xl text-white mb-2">Activity 12</h3>
-                        <p class="text-gray-300">Placeholder for your twelfth activity.</p>
-                    </div>
-
-                    <!-- Slider Controls -->
-                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        <button id="prev-btn" class="text-white px-4 py-2 rounded-full bg-gray-600 hover:bg-gray-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400">&lt;</button>
-                        <button id="next-btn" class="text-white px-4 py-2 rounded-full bg-gray-600 hover:bg-gray-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400">&gt;</button>
-                    </div>
+            <div class="w-full flex-grow flex flex-col items-center space-y-8 overflow-y-auto h-full">
+                <!-- Activity Item 1 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+1" alt="Image for Activity 1" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Robotics Club</h3>
+                    <p class="text-gray-300">Description of your role and achievements in the Robotics Club, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 2 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+2" alt="Image for Activity 2" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Volunteer at Animal Shelter</h3>
+                    <p class="text-gray-300">Description of your role and achievements in the Robotics Club, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 3 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+3" alt="Image for Activity 3" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 3</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 4 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+4" alt="Image for Activity 4" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 4</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 5 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+5" alt="Image for Activity 5" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 5</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 6 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+6" alt="Image for Activity 6" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 6</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 7 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+7" alt="Image for Activity 7" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 7</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 8 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+8" alt="Image for Activity 8" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 8</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 9 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+9" alt="Image for Activity 9" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 9</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 10 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+10" alt="Image for Activity 10" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 10</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 11 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+11" alt="Image for Activity 11" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 11</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <!-- Activity Item 12 -->
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+12" alt="Image for Activity 12" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 12</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
                 </div>
             </div>
         </div>
@@ -334,17 +376,50 @@
 
     <!-- Contact Modal -->
     <div id="contact-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content bg-slate-800 p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
             <h2 class="text-3xl font-bold text-white mb-4">Contact</h2>
             <div class="flex justify-center mb-6">
                 <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Contact+Image" alt="Image representing contact" class="rounded-lg shadow-md">
             </div>
-            <ul class="list-none text-gray-300 space-y-2 text-center">
-                <li>Email: your.email@example.com</li>
-                <li>LinkedIn: linkedin.com/in/yourprofile</li>
-                <li>GitHub: github.com/yourusername</li>
-            </ul>
+            <div class="hero-social">
+                    <a href="https://www.facebook.com/jawadal.sovon"  target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/jawatalsovon/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jawat-al-sovon-a42295354/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/jawatalsovon"><i class="fab fa-github" target="_blank"></i></a>
+                    <a href="https://www.youtube.com/@Jawat-zz4wx"><i class="fab fa-youtube" target="_blank"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Skills Modal -->
+    <div id="skills-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
+            <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
+            <h2 class="text-3xl font-bold text-white mb-4">Skills</h2>
+            <div class="flex justify-center mb-6">
+                <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Skills+Image" alt="Image representing skills" class="rounded-lg shadow-md">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-300">
+                <div>
+                    <h3 class="font-semibold text-xl text-white mb-2">Technical Skills</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Programming Languages: Python, Java, JavaScript, C++</li>
+                        <li>Frameworks: React, Node.js, Django</li>
+                        <li>Databases: SQL, MongoDB</li>
+                        <li>Cloud: AWS, Google Cloud</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-xl text-white mb-2">Soft Skills</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Problem-Solving</li>
+                        <li>Teamwork & Collaboration</li>
+                        <li>Communication</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -401,36 +476,6 @@
                 }
             }
         });
-
-        // Extracurricular Activities Slider Logic
-        const activitiesContainer = document.getElementById('activities-slider');
-        const slides = activitiesContainer.querySelectorAll('.activity-slide');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                if (i === index) {
-                    slide.classList.remove('hidden');
-                } else {
-                    slide.classList.add('hidden');
-                }
-            });
-        }
-
-        nextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        });
-
-        // Initialize the slider by showing the first slide
-        showSlide(currentSlide);
     </script>
 </body>
 </html>
