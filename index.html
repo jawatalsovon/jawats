@@ -21,6 +21,7 @@
         .modal {
             transition: opacity 0.3s ease-in-out;
         }
+        /* Applying the same radial gradient to the modal content boxes */
         .modal-content {
             background-color: rgba(40, 40, 40, 0.9); /* Fallback */
             background-image: radial-gradient(at center, rgba(40, 40, 40, 0.9), rgba(180, 180, 180, 0.4));
@@ -60,15 +61,15 @@
             <a href="My_resume.pdf" class="inline-block bg-gray-700/60 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:scale-105 hover:bg-gray-600/60 transition-transform duration-300 transform-gpu">
                 Download Resume
             </a>
-        </div>
+            </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             
+
             <div data-modal-target="activities-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
                 <div class="flex flex-col items-center">
                     <h2 class="text-2xl font-semibold mb-2 text-white">Extracurricular Activities</h2>
                     <p class="text-center text-gray-400">My passions outside of academics.</p>
-                    <p class="text-sm text-gray-500 mt-2 hover:underline">Click to see more</p>
                 </div>
             </div>
 
@@ -76,15 +77,14 @@
                 <div class="flex flex-col items-center">
                     <h2 class="text-2xl font-semibold mb-2 text-white">Projects</h2>
                     <p class="text-center text-gray-400">Some of my creations</p>
-                    <p class="text-sm text-gray-500 mt-2 hover:underline">Click to see more</p>
                 </div>
             </div>
 
+            
             <div data-modal-target="honors-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60">
                 <div class="flex flex-col items-center">
                     <h2 class="text-2xl font-semibold mb-2 text-white">Honors</h2>
                     <p class="text-center text-gray-400">Awards and achievements I've received.</p>
-                    <p class="text-sm text-gray-500 mt-2 hover:underline">Click to see more</p>
                 </div>
             </div>
 
@@ -92,7 +92,6 @@
                 <div class="flex flex-col items-center">
                     <h2 class="text-2xl font-semibold mb-2 text-white">Skills</h2>
                     <p class="text-center text-gray-400">My technical, professional, and soft skills.</p>
-                    <p class="text-sm text-gray-500 mt-2 hover:underline">Click to see more</p>
                 </div>
             </div>
         </div>
@@ -100,6 +99,14 @@
         <div data-modal-target="contact-modal" class="group cursor-pointer p-6 bg-gray-800/60 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 transform-gpu hover:bg-gray-700/60 text-center">
             <h2 class="text-3xl font-bold text-white mb-2">Contact</h2>
             <p class="text-center text-gray-400">Get in touch with me!</p>
+            <div class="flex flex-wrap justify-center gap-6 text-2xl mt-4">
+                <a href="mailto:jawatalsovon2981@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.facebook.com/jawadal.sovon" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/jawatalsovon/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/jawat-al-sovon-a42295354/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jawatalsovon" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/@Jawat-zz4wx" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
     </div>
 
@@ -114,70 +121,26 @@
             <div class="flex justify-center mb-6">
                 <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Your+Photo+Here" alt="Placeholder for a professional photo" class="rounded-lg shadow-md">
             </div>
-            <p class="text-gray-300 leading-relaxed mb-4">
-                Hello there, <br>
-                This is Jawat Al Sovon. I am a high school graduate from Rajshahi Cadet College, one of the most prestigious institutions in my country. I love to dream, and it’s always highly rewarding to see some of my dreams come true, like earning my own money to buy presents for my family and performing on a major stage.
-            </p>
-            <p class="text-gray-300 leading-relaxed mb-4">
-                But one of my earliest dreams is unfulfilled yet. In fifth grade, while studying a paragraph on "Unemployment issues in Bangladesh," I first imagined that I could one day address this challenge.
-            </p>
-            <p class="text-gray-300 leading-relaxed mb-4">
-                A few years ago, I met Taukir Vai, a freelancer who started his own IT firm after he couldn't get into a public university and was ridiculed for his academic "failure". However, now, he's training others and building a skilled workforce. But, for his lack of official recognition, his firm's growth is still limited. So I found that to tackle a problem on a large scale, only initiative and practical skills are not enough; one has to have an accredited education.
-            </p>
             <p class="text-gray-300 leading-relaxed">
-                I've found my passion in data science, where I love dealing with datasets and using them to dig out real solutions. A data science major from a worldwide-recognized university will provide me with practical expertise and the official credibility I need. By the time I graduate, I plan to establish my own data firm. I want to build it into a company, maybe even a multinational one someday, creating opportunities for at least a portion of the 2.6 million unemployed people in my country, including 1.38 million university graduates.
+                Hello there, <br>
+                This is Jawat Al Sovon. I am a high school graduate from Rajshahi Cadet College, one of the most prestigious institutions in my country. I love to dream, 
+                and it’s always highly rewarding to see some of my dreams come true, like earning my own money to buy presents for my family and performing on a major stage. 
+                <br>
+                But one of my earliest dreams is unfulfilled yet. In fifth grade, while studying a paragraph on "Unemployment issues in Bangladesh,"
+                I first imagined that I could one day address this challenge. <br>
+            A few years ago, I met Taukir Vai, a freelancer who started his own IT firm after he couldn't get into a public university and was ridiculed for his academic "failure".
+                However, now, he's training others and building a skilled workforce. But, for his lack of official recognition, his firm's growth is still limited.
+                So I found that to tackle a problem on a large scale, only initiative and practical skills are not enough; one has to have an accredited education.<br>
+                <br> I've found my passion in data science, where I love dealing with datasets and using them to dig out real solutions. 
+                A data science major from a worldwide-recognized university will provide me with practical expertise and the official credibility I need.
+                By the time I graduate, I plan to establish my own data firm. I want to build it into a company, maybe even a multinational one someday,
+                creating opportunities for at least a portion of the 2.6 million unemployed people in my country, including 1.38 million university graduates.
+                
+
             </p>
         </div>
     </div>
 
-    <div id="activities-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
-        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative flex flex-col items-center">
-            <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
-            <h2 class="text-3xl font-bold text-white mb-6">Extracurricular Activities</h2>
-            <div class="w-full flex-grow flex flex-col items-center space-y-8 overflow-y-auto h-full">
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Research+Image" alt="Image for Research" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Research</h3>
-                    <p class="text-gray-300">Project Researcher, Research Paper author, Stockholm Junior Water Prize (SJWP), CERN Beamline Competition (BL4S). I researched and prototyped a self-powered wastewater treatment system, which was a national winner in the SJWP. I also proposed a particle detector experiment for BL4S.</p>
-                </div>
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Athletics+Image" alt="Image for Athletics" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Athletics: JV/Varsity</h3>
-                    <p class="text-gray-300">As a 1st Class Long Runner at Rajshahi Cadet College, I trained juniors for long-run and relay events. I won over 20 medals in four years of Annual Athletics Competitions, consistently finishing first in the 800m and 1500m races.</p>
-                </div>
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Debate+Image" alt="Image for Debate/Speech" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Debate/Speech</h3>
-                    <p class="text-gray-300">I founded and served as the President of the Rajshahi Cadet College MUN Club, where I organized biweekly workshops and Intra-MUNs with over three students. I won four national MUN awards and mentored juniors to achieve the same.</p>
-                </div>
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Music+Image" alt="Image for Music" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Music: Vocal</h3>
-                    <p class="text-gray-300">I was the Lead Vocalist and Rhythm Guitarist for Shohosrabdo (The Millennial), the Rajshahi Cadet College Band Team. I led the team and performed at every college event, including a massive show at the 2025 college reunion for over 10,000 people.</p>
-                </div>
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Community+Service+Image" alt="Image for Community Service" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Community Service (Volunteer)</h3>
-                    <p class="text-gray-300">As a Field Working Leader Volunteer at Genesis Inc., I collected funds from school alumni and distributed free groceries to over 550 low-income families, contributing more than 20 hours of community service each year.</p>
-                </div>
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Computer+Image" alt="Image for Computer/Technology" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Computer/Technology</h3>
-                    <p class="text-gray-300">I co-founded the Robotics Club and am self-taught in C, Python, and Arduino IDE. I completed Harvard's CS50x and CS50P, presented creative robot ideas to a roboticist, and programmed robots for tests.</p>
-                </div>
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Cross-country+Image" alt="Image for Cross-country" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Cross-country</h3>
-                    <p class="text-gray-300">I was an Athlete and Coach for the Inter House Cross Country Competition at Rajshahi Cadet College. I led the Cross Country Squad, regularly coaching juniors, and achieved 1st, 2nd, and 5th place finishes in the 10.5 km race over three years.</p>
-                </div>
-                <div class="activities-item w-full flex flex-col items-center text-center">
-                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Work+Image" alt="Image for Work" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Work (Paid)</h3>
-                    <p class="text-gray-300">I worked as a Private Tutor, tutoring students in science subjects during the coronavirus pandemic to support my family; bought my father a new phone with my first income.</p>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <div id="projects-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
         <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative flex flex-col items-center">
@@ -216,28 +179,29 @@
                 <div class="honors-item w-full flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+1" alt="Image for certificate 1" class="rounded-lg shadow-md mb-4">
                     <h3 class="font-semibold text-xl text-white mb-2">Academic Excellence Award</h3>
-                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                    <p class="text-gray-300">7th Position in the Rajshahi Edu. [span_0](start_span)Board (Talent pool Scholarship) among more than 180,000 students.[span_0](end_span)</p>
                 </div>
                 <div class="honors-item w-full flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+2" alt="Image for certificate 2" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">First Place - University Hackathon</h3>
-                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                    <h3 class="font-semibold text-xl text-white mb-2">Commonwealth Essay Competition 2024</h3>
+                    [span_1](start_span)<p class="text-gray-300">Silver award.[span_1](end_span)</p>
                 </div>
                 <div class="honors-item w-full flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+3" alt="Image for certificate 3" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Honor 3</h3>
-                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                    <h3 class="font-semibold text-xl text-white mb-2">National MUN Awards</h3>
+                    [span_2](start_span)<p class="text-gray-300">4 National MUN awards including 2nd in committee in UNSC-RUMUN and COPUOS-DUNMUN_2024.[span_2](end_span)</p>
                 </div>
                 <div class="honors-item w-full flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+4" alt="Image for certificate 4" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Honor 4</h3>
-                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                    <h3 class="font-semibold text-xl text-white mb-2">Stockholm Junior Water Project 2024</h3>
+                    [span_3](start_span)<p class="text-gray-300">Nationalist.[span_3](end_span)</p>
                 </div>
                 <div class="honors-item w-full flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+5" alt="Image for certificate 5" class="rounded-lg shadow-md mb-4">
-                    <h3 class="font-semibold text-xl text-white mb-2">Honor 5</h3>
-                    <p class="text-gray-300">Description of this honor or certificate, including the issuing organization, date, and what you achieved.</p>
+                    <h3 class="font-semibold text-xl text-white mb-2">Nationalist in Olympiads</h3>
+                    [span_4](start_span)<p class="text-gray-300">Nationalist- Math, Physics, Biology (1st Runner-up), Junior Science Olympiad in the past three years[span_4](end_span)</p>
                 </div>
+                
                 <div class="honors-item w-full flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Certificate+6" alt="Image for certificate 6" class="rounded-lg shadow-md mb-4">
                     <h3 class="font-semibold text-xl text-white mb-2">Honor 6</h3>
@@ -277,6 +241,76 @@
         </div>
     </div>
     
+    
+    <div id="activities-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+        <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative flex flex-col items-center">
+            <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
+            <h2 class="text-3xl font-bold text-white mb-6">Extracurricular Activities</h2>
+            <div class="w-full flex-grow flex flex-col items-center space-y-8 overflow-y-auto h-full">
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+1" alt="Image for Activity 1" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Robotics Club</h3>
+                    <p class="text-gray-300">Description of your role and achievements in the Robotics Club, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+2" alt="Image for Activity 2" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Volunteer at Animal Shelter</h3>
+                    <p class="text-gray-300">Description of your role and achievements in the Robotics Club, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+3" alt="Image for Activity 3" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 3</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+4" alt="Image for Activity 4" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 4</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+5" alt="Image for Activity 5" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 5</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+6" alt="Image for Activity 6" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 6</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+7" alt="Image for Activity 7" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 7</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+8" alt="Image for Activity 8" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 8</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+9" alt="Image for Activity 9" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 9</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+10" alt="Image for Activity 10" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 10</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+11" alt="Image for Activity 11" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 11</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+                <div class="activities-item w-full flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Activity+12" alt="Image for Activity 12" class="rounded-lg shadow-md mb-4">
+                    <h3 class="font-semibold text-xl text-white mb-2">Activity 12</h3>
+                    <p class="text-gray-300">Description of your role and achievements in this activity, including what you learned and contributed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="skills-modal" class="modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
         <div class="modal-content p-8 rounded-xl shadow-xl w-11/12 sm:w-3/4 lg:w-1/2 max-h-[90vh] overflow-y-auto relative">
             <button class="modal-close-btn absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
@@ -315,7 +349,7 @@
                 <img src="https://placehold.co/400x200/1e293b/a0a7ad?text=Contact+Image" alt="Image representing contact" class="rounded-lg shadow-md">
             </div>
             
-            <div class="flex flex-wrap justify-center gap-6 text-2xl">
+        <div class="flex flex-wrap justify-center gap-6 text-2xl">
                 <a href="mailto:jawatalsovon2981@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
                 <a href="https://www.facebook.com/jawadal.sovon" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/jawatalsovon/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -327,10 +361,12 @@
     </div>
     
     <script>
+        // Get all elements with the 'data-modal-target' attribute
         const modalTriggers = document.querySelectorAll('[data-modal-target]');
         const closeButtons = document.querySelectorAll('.modal-close-btn');
         const modals = document.querySelectorAll('.modal');
 
+        // Function to open a modal
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             if (modal) {
@@ -339,6 +375,7 @@
             }
         }
 
+        // Function to close a modal
         function closeModal(modalElement) {
             if (modalElement) {
                 modalElement.classList.remove('flex');
@@ -360,6 +397,7 @@
             });
         });
 
+        // Close modal when clicking outside of it
         modals.forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target.classList.contains('modal')) {
